@@ -26,7 +26,16 @@ Wyznaczyc numer pary liczb, to ktorej wpada liczba k
 
 ```
 numer_pary(k, ciag){
-  numer = (k + 18) / 2
+  numer = 0
+  if(k%2==1){
+    numer = ciag[k - 1] * 10
+    numer = ciag[k]
+  }
+  if(k%2==0){
+    numer = ciag[k + 1]
+    numer = ciag[k] * 10
+  }  
+  return numer
 }
 ```
 
