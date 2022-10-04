@@ -26,7 +26,7 @@ Wyznaczyc numer pary liczb, to ktorej wpada liczba k
 
 ```
 numer_pary(k, ciag){
-  
+  numer = (k + 18) / 2
 }
 ```
 
