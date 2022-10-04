@@ -1,0 +1,3 @@
+# AlgorytmyIStrukturyDanych
+
+Author Sebastian Pavlovic
