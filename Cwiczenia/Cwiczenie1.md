@@ -67,7 +67,7 @@ arms(){
     y = (i / 100) % 10
     z = (i / 1000) % 10
     
-    if(i==((v*v*v*v)(x*x*x*x)+(y*y*y*y)+(z*z*z*z))){
+    if(i==((v*v*v*v)+(x*x*x*x)+(y*y*y*y)+(z*z*z*z))){
       arms[j] = i
       j++
       }
