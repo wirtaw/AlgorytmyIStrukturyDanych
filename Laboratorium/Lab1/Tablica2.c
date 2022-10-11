@@ -11,7 +11,7 @@ Obliczyc funkcja y = ax^2 znaczenia, gdy a - stale. x - zmieniase z x0 do xn, kr
 #include <stdio.h>
 
 void main(void){
-  double a, x, xn, hx;
+  double a, x, xn, hx = 0;
 
   printf("Podaj a: ");
   scanf("%lf", &a);  
@@ -19,8 +19,10 @@ void main(void){
   scanf("%lf", &x);  
   printf("Podaj xn: ");
   scanf("%lf", &xn);
-  printf("Podaj hx: ");
-  scanf("%lf", &hx);
+  while(hx<=0){
+    printf("Podaj hx: ");
+    scanf("%lf", &hx);
+  }
   
   while(x<=xn){
     printf("%.1lf = %.1lf * %.1lf ^ 2 \n",(a*x*x), a, x);
