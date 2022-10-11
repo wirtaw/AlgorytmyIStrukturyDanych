@@ -20,7 +20,7 @@ void main(void){
   printf("Podaj xn: ");
   scanf("%lf", &xn);
   while(hx<=0){
-    printf("Podaj hx: ");
+    printf("Podaj dodatni krok hx: ");
     scanf("%lf", &hx);
   }
   
