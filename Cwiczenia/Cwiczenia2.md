@@ -20,7 +20,7 @@ silnia(liczba){
 Iloczyn i reszta
 
 ```
-IloIRes()
+
 ```
 
 
