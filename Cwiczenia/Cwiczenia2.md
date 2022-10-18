@@ -20,7 +20,13 @@ silnia(liczba){
 Iloczyn i reszta
 
 ```
+IloIRes(lic1, lic2){
+  
+  iloczyn = lic1 * lic2;
+  reszta = lic1 % lic2;
 
+  return iloczyn, reszta
+}
 ```
 
 
@@ -28,14 +34,12 @@ Iloczyn i reszta
 NWD
 
 ```
-
 ```
 
 # Zadanie 4
 Srednia
 
 ```
-
 ```
 
 
@@ -43,5 +47,4 @@ Srednia
 Min albo Maks
 
 ```
-
 ```
