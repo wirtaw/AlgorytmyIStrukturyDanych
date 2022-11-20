@@ -16,14 +16,14 @@ Czy jest $ \sum_{i=1}^{n}i^k ∊ Θ(n^{k+1})$ i Ω(n^{k+1}) dla calkowitych k?
 
 # Uporządkuj następujące funkcje według rosnącej
 
-(1/2)ⁿ
-17
-loglogn
-logn
-log²n
-n/logn
-√nlog²n
-n
+(1/2)ⁿ  
+17  
+loglogn  
+logn  
+log²n  
+n/logn  
+√nlog²n  
+n  
 (3/2)ⁿ
 
 
