@@ -67,6 +67,9 @@ Niedominujace linii: 2
 4           printf("%d", i);  
 5       }  
 6   }  
+
+Złożoność liniowa
+
  
 1 function someFunction(n) {  
 2       i = 0;  
@@ -75,6 +78,9 @@ Niedominujace linii: 2
 5       }  
 6   }  
 
+Złożoność liniowa
+
+
 1 function someFunction(n) {   
 2       i = 0;  
 3       for (i; i < n  ; i = i * 2) {  
@@ -82,8 +88,13 @@ Niedominujace linii: 2
 5       }  
 6   }  
 
+Złożoność logarytmiczna
+
+
 1 function someFunction(n) {  
 3       while (true) {  
 4           printf("%d", n);  
 5       }  
 6   }  
+
+Złożoność nieskończona
