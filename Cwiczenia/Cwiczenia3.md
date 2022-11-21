@@ -39,7 +39,8 @@ n,
 9   }  
 
 Dominujace linii: 3,4,5  
-Niedominujace linii: 2  
+Niedominujace linii: 2 
+Złożoność kwadratowa 
 
 
 1 function someFunction(n) {  
@@ -57,6 +58,7 @@ Niedominujace linii: 2
  
 Dominujace linii: 3, 4, 5, 6 
 Niedominujace linii: 2 
+Złożoność do 4 potęgi
 
 
 # Notacja Big-O
