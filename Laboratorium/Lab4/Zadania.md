@@ -39,11 +39,12 @@ Aryt( pier,  krok,  n) {
 Napisz funkcję rekurencyjną do obliczenia n-tej liczby ciągu geomytrecznego
 
 ```
-Geom( pier,  krok,  n) {
+Geom( pier,  drug,  n) {
   if (n > 1) {
-    return Geom(pier * krok, krok, n-1);
+    q = drug / pier
+    return Geom(drug, drug * q, n - 1)
   } else {
-    return pier;
+    return pier
   }
 }
 ```
