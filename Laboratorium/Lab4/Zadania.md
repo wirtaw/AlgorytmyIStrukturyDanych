@@ -3,6 +3,7 @@ Dana calkowita liczba n>=1. Napisz rekurencyjna funkcja takiej liczby z, ktora w
 
 ```
 Liczba(n, a){
+
 }  
 ```
 
@@ -40,7 +41,7 @@ Napisz funkcję rekurencyjną do obliczenia n-tej liczby ciągu geomytrecznego
 ```
 Geom( pier,  krok,  n) {
   if (n > 1) {
-    return Aryt(pier * krok, krok, n-1);
+    return Geom(pier * krok, krok, n-1);
   } else {
     return pier;
   }
