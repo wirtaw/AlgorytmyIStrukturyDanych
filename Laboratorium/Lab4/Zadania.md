@@ -2,9 +2,13 @@
 Dana calkowita liczba n>=1. Napisz rekurencyjna funkcja takiej liczby z, ktora wypelnia taki warunek 2^(a-1) <= n < 2^a
 
 ```
-Liczba(n, a){
-
-}  
+Liczba( n, a) {
+  if(pow(2, a-1) <= n && n < pow(2,a)){
+    return a;
+  }
+  else
+    return Liczba(n, a+1);
+}
 ```
 
 
