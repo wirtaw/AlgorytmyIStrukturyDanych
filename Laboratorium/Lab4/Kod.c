@@ -14,6 +14,8 @@ float Aryt(float pier, float krok, float n);
 
 float Geom(float pier, float drug, float n);
 
+int Pascal(int row, int column);
+
 void main(void) {
 
   printf("a = %d\n", Liczba(8193, 0));
@@ -28,6 +30,10 @@ void main(void) {
   printf("ciag geometryczny = %.2f\n", Geom(2, 4, 11));
   // Pierwsza liczba to pierwsza liczba, druga to druga liczba ciagu, a trzecia
   // jest n-ta liczba do znalezienia
+  
+  printf("liczba pascala = %d\n", Pascal(10, 5));
+  // Pierwsza liczba to linia, druga to columna
+  
   return;
 }
 
@@ -62,4 +68,15 @@ float Geom(float pier, float drug, float n) {
   } else {
     return pier;
   }
+}
+
+int Pascal(int row, int column) {
+  if (column == 0)
+    return 0;
+  else if (row == 1 && column == 1)
+    return 1;
+  else if (column > row)
+    return 0;
+  else
+    return (Pascal(row - 1, column - 1) + Pascal(row - 1, column));
 }
