@@ -57,7 +57,14 @@ Geom( pier,  drug,  n) {
 Napisz funkcję rekurencyjną do wyprowadzenia n-tej liczby trojkatu Paskalia
 
 ```
-Pasc(){
-
+pasc( row, column) {
+  if (column == 0)
+    return 0
+  else if (row == 1 && column == 1)
+    return 1
+  else if (column > row)
+    return 0
+  else
+    return (pascal(row - 1, column - 1) + pascal(row - 1, column))
 }
 ```
