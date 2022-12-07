@@ -1,6 +1,6 @@
 // Sebatian Pavlovic
 // binarne poszukiwanie
-// 2022-12-06
+// 2022-12-07
 
 #include <errno.h>
 #include <math.h>
@@ -9,36 +9,30 @@
 
 #define MAX_LINE_LENGTH 1000
 
-int binarySearch(int *array, int key, int length) {
-  int lowIndex = 0, highIndex = length;
-
-  while (lowIndex < highIndex) {
-    int midIndex = floor((lowIndex + highIndex) / 2);
+int binarySearch(int *array, int length, int r, int key) {
+  while (length < r) {
+    int midIndex = length + (r - length) / 2;
 
     if (array[midIndex] == key) {
       return midIndex;
     } else if (key > array[midIndex]) {
-      lowIndex = midIndex;
+      length = midIndex + 1;
     } else {
-      highIndex = midIndex;
+      r = midIndex - 1;
     }
   }
 
   return -1;
 }
 
-int binarySearchRecursion(int *array, int start, int end, int index, int key) {
-  if (start > end) {
-    index = 0;
-  } else {
-    int midIndex = floor((start + end) / 2);
-    if (array[midIndex] < key) {
-      binarySearchRecursion(array, midIndex + 1, end, index, key);
-    } else if (key > array[midIndex]) {
-      binarySearchRecursion(array, start, midIndex - 1, index, key);
-    } else {
-      index = midIndex;
-    }
+int binarySearchRecursion(int arr[], int length, int r, int key) {
+  if (r >= length) {
+    int mid = length + (r - length) / 2;
+    if (arr[mid] == key)
+      return mid;
+    if (arr[mid] > key)
+      return binarySearchRecursion(arr, length, mid - 1, key);
+    return binarySearchRecursion(arr, mid + 1, r, key);
   }
   return -1;
 }
@@ -47,6 +41,7 @@ int main() {
 
   int start = 0, end = MAX_LINE_LENGTH;
   int key = 70405; // liczba do wyszukania
+
   FILE *fptr;
   int number, i = 0, arr[MAX_LINE_LENGTH];
 
@@ -67,11 +62,10 @@ int main() {
   fclose(fptr);
 
   printf("Indeks tej liczby jest: %d\n",
-         binarySearch(arr, key, MAX_LINE_LENGTH));
+         binarySearch(arr, 0, MAX_LINE_LENGTH, key));
 
-  // Jest blad w implementacji lub wywolaniu funkcji rekurencyjnej
-  printf("Czasami on dobrze pisze: %d\n",
-         binarySearchRecursion(arr, start, end, MAX_LINE_LENGTH, key));
+  printf("Indeks tej liczby jest: %d\n",
+         binarySearchRecursion(arr, 0, MAX_LINE_LENGTH - 1, key));
 
   return 0;
 }
