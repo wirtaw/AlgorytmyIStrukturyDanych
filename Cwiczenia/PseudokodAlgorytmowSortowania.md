@@ -1,4 +1,17 @@
 ## Pseudokody algorytmow sortowania
+# Prior
+
+```
+function prior(array, index, index2) {
+  if (array[index] <= array[index2]) {
+	return true;
+  }
+
+  return false;
+}
+```
+
+
 # Swap
 
 ```
